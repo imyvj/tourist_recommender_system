@@ -1,0 +1,149 @@
+# Data paths
+data:
+  raw_dir: "data/raw/"
+  processed_dir: "data/processed/"
+  final_dir: "data/final/"
+
+# Geofabrik shapefile
+geofabrik:
+  shp_path: data/raw/philippines-260507-free-shp/gis_osm_pois_free_1.shp
+
+# POI filtering (keep only these fclass values)
+poi_categories:
+  keep:
+    - alpine_hut
+    - archaeological
+    - arts_centre
+    - artwork
+    - attraction
+    - bakery
+    - bank
+    - bar
+    - beach
+    - bicycle_rental
+    - biergarten
+    - bookshop
+    - cafe
+    - camp_site
+    - car_rental
+    - car_sharing
+    - caravan_site
+    - castle
+    - chalet
+    - chemist
+    - cinema
+    - clinic
+    - clothes
+    - college
+    - community_centre
+    - department_store
+    - dentist
+    - doctors
+    - dog_park
+    - embassy
+    - fast_food
+    - fire_station
+    - fitness_centre
+    - florist
+    - food_court
+    - fort
+    - fountain
+    - garden
+    - gift_shop
+    - golf_course
+    - guesthouse
+    - hairdresser
+    - hospital
+    - hostel
+    - hotel
+    - ice_rink
+    - jeweller
+    - kindergarten
+    - library
+    - lighthouse
+    - mall
+    - marketplace
+    - memorial
+    - monument
+    - motel
+    - museum
+    - nightclub
+    - observation_tower
+    - outdoor_shop
+    - park
+    - pharmacy
+    - picnic_site
+    - pitch
+    - playground
+    - police
+    - post_office
+    - pub
+    - recycling
+    - recycling_glass
+    - recycling_metal
+    - recycling_paper
+    - restaurant
+    - ruins
+    - school
+    - shoe_shop
+    - sports_centre
+    - sports_hall
+    - sports_shop
+    - stadium
+    - stationery
+    - supermarket
+    - swimming_pool
+    - theatre
+    - theme_park
+    - toilet
+    - tourist_info
+    - tower
+    - town_hall
+    - toy_shop
+    - track
+    - travel_agent
+    - university
+    - vending_machine
+    - vending_parking
+    - veterinary
+    - video_shop
+    - viewpoint
+    - water_mill
+    - water_tower
+    - water_well
+    - wayside_cross
+    - wayside_shrine
+    - wilderness_hut
+    - windmill
+    - zoo
+
+# Scraping
+scraping:
+  max_reviews_per_poi: 100
+  delay_seconds: 5
+  scraper_path: "tools/google-review-scraper/scraper.js" # Path to scraper
+  output_dir: "data/scraped/reviews/"
+  node_path: "node"
+
+# Clustering
+clustering:
+  min_clusters: 2
+  max_clusters: 15
+  genetic_algorithm:
+    population_size: 50
+    generations: 100
+    crossover_rate: 0.8
+    mutation_rate: 0.1
+
+# NCF training
+ncf:
+  embedding_dim: 32
+  batch_size: 128
+  epochs: 30
+  validation_split: 0.1
+  learning_rate: 0.001
+
+# Evaluation
+evaluation:
+  k_values: [5, 10, 20]
+  random_seed: 42
