@@ -25,13 +25,6 @@ data/final/
 logs/
 *.log
 
-# =====================
-# Node.js (scraper tool)
-# =====================
-tools/**/node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # =====================
 # OS files

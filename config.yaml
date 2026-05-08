@@ -117,13 +117,19 @@ poi_categories:
     - windmill
     - zoo
 
-# Scraping
+# Yankiozguven scraper configuration
+yankiozguven:
+  scraper_path: "tools/google-maps-url-review-scraper/Google Place URL Review Scraper.py"
+  output_dir: "data/raw/scraped_reviews/"
+  default_reviews: 50
+  default_sort: "newest"  # options: newest, most_relevant, highest_rating, lowest_rating
+  
+# Scraping settings
 scraping:
-  max_reviews_per_poi: 100
-  delay_seconds: 5
-  scraper_path: "tools/google-review-scraper/scraper.js" # Path to scraper
-  output_dir: "data/scraped/reviews/"
-  node_path: "node"
+  max_workers: 2
+  batch_size: 5
+  delay_between_requests: 5
+  timeout_seconds: 180
 
 # Clustering
 clustering:
