@@ -1,12 +1,12 @@
 # Data paths
 data:
-  raw_dir: "data/raw/"
-  processed_dir: "data/processed/"
-  final_dir: "data/final/"
+  raw_dir: "src/data/raw/"
+  processed_dir: "src/data/processed/"
+  final_dir: "src/data/final/"
 
 # Geofabrik shapefile
 geofabrik:
-  shp_path: data/raw/philippines-260507-free-shp/gis_osm_pois_free_1.shp
+  shp_path: src/data/raw/philippines-260507-free-shp/gis_osm_pois_free_1.shp
 
 # POI filtering (keep only these fclass values)
 poi_categories:

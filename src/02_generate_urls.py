@@ -38,7 +38,7 @@ def generate_urls(poi_catalog_path, output_path):
 
     urls_df.to_csv(output_path, index=False)
 
-    logger.info(f"Saved {len(urls_df)} URLs → {output_path}")
+    logger.info(f"Saved {len(urls_df)} URLs to {output_path}")
 
     return urls_df
 
