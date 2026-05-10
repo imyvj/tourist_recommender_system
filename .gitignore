@@ -12,10 +12,6 @@ venv/
 # =====================
 # Data (VERY IMPORTANT)
 # =====================
-data/raw/
-data/processed/
-data/final/
-*.csv
 *.parquet
 
 # =====================
