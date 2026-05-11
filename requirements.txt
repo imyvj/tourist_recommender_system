@@ -14,7 +14,12 @@ seaborn>=0.12.0
 pyyaml>=6.0
 tqdm>=4.65.0
 requests>=2.31.0
+python-dotenv>=1.0.0
 
 # For fuzzy matching (used in some steps)
 fuzzywuzzy>=0.18.0
 python-Levenshtein>=0.21.0
+
+# Scraper (tools/google-maps-review-scraper/) — also run: playwright install chromium
+playwright>=1.40.0
+python-slugify>=8.0.0
